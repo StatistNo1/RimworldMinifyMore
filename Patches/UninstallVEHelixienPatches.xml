@@ -7,21 +7,23 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[contains(defName, "VHGE_GasSunLamp")
-				or contains(defName, "VHGE_GasWallLamp")
-				or contains(defName, "VHGE_GasFloodlight")
+					<xpath>Defs/ThingDef[contains(defName, "VHGE_HelixienGenerator")
 				or contains(defName, "VHGE_GasOperatedPodLauncher")
-				or contains(defName, "VHGE_HelixienGenerator")
-				or contains(defName, "VHGE_GasPoweredSmelter")
-				or contains(defName, "VHGE_GasPoweredStove")
-				or contains(defName, "VHGE_GasPoweredSmithy")
-				or contains(defName, "VHGE_GasCooler")
-				or contains(defName, "VHGE_GasLamp")]</xpath>
+				or contains(defName, "VHGE_GasPipeValve")
+				or contains(defName, "VHGE_GasPoweredCrematorium")
+				or contains(defName, "VHGE_GasPoweredRefinery")
+				or contains(defName, "VHGE_GasCooler")]</xpath>
 					<value>
 						<minifiedDef>MinifiedThing</minifiedDef>
 						<thingCategories>
 							<li>BuildingsPower</li>
 						</thingCategories>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "VHGE_HelixienGenerator"]/statBases</xpath>
+					<value>
+						<Mass>40</Mass>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
@@ -31,15 +33,27 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName = "VHGE_HelixienGenerator"]/statBases</xpath>
+					<xpath>Defs/ThingDef[defName = "VHGE_GasPipeValve"]/statBases</xpath>
 					<value>
-						<Mass>10</Mass>
+						<Mass>6</Mass>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "VHGE_GasPoweredCrematorium"]/statBases</xpath>
+					<value>
+						<Mass>20</Mass>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "VHGE_GasPoweredRefinery"]/statBases</xpath>
+					<value>
+						<Mass>20</Mass>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName = "VHGE_GasCooler"]/statBases</xpath>
 					<value>
-						<Mass>3</Mass>
+						<Mass>35</Mass>
 					</value>
 				</li>
 				<li Class="PatchOperationFindMod">
@@ -61,7 +75,7 @@
 							<li Class="PatchOperationAdd">
 								<xpath>Defs/ThingDef[defName = "VHGE_IndustrialHelixienGenerator"]/statBases</xpath>
 								<value>
-									<Mass>20</Mass>
+									<Mass>60</Mass>
 								</value>
 							</li>
 						</operations>
