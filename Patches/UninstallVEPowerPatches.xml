@@ -1,0 +1,69 @@
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vanilla Furniture Expanded - Power</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[contains(defName, "VFE_AdvancedWindTurbine")
+				or contains(defName, "VFE_AdvancedSolarGenerator")
+				or contains(defName, "VFE_AdvancedWatermillGenerator")
+				or contains(defName, "VPE_AdvancedGeothermalGenerator")
+				or contains(defName, "VFE_IndustrialWoodFiredGenerator")
+				or contains(defName, "VFE_IndustrialChemfuelPoweredGenerator")
+				or contains(defName, "VFE_TidalGenerator")]</xpath>
+					<value>
+						<minifiedDef>MinifiedThing</minifiedDef>
+						<thingCategories>
+							<li>BuildingsPower</li>
+						</thingCategories>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "VFE_AdvancedWindTurbine"]/statBases</xpath>
+					<value>
+						<Mass>40</Mass>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "VFE_AdvancedSolarGenerator"]/statBases</xpath>
+					<value>
+						<Mass>40</Mass>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "VFE_AdvancedWatermillGenerator"]/statBases</xpath>
+					<value>
+						<Mass>140</Mass>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "VPE_AdvancedGeothermalGenerator"]/statBases</xpath>
+					<value>
+						<Mass>130</Mass>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "VFE_IndustrialWoodFiredGenerator"]/statBases</xpath>
+					<value>
+						<Mass>20</Mass>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "VFE_IndustrialChemfuelPoweredGenerator"]/statBases</xpath>
+					<value>
+						<Mass>20</Mass>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "VFE_TidalGenerator"]/statBases</xpath>
+					<value>
+						<Mass>130</Mass>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
